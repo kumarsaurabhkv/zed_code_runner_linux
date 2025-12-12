@@ -30,7 +30,7 @@ A **ready-to-use setup for Zed IDE** that lets you run the currently open file w
 1. **Clone this repository**
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/kumarsaurabhkv/zed_code_runner_linux.git
 ```
 1. **Copy files to Zed config directory**
 
