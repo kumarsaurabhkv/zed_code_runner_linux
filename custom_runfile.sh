@@ -13,20 +13,16 @@ EXT="${FILE##*.}"
 BASENAME="$(basename "$FILE")"
 NAME="${BASENAME%.*}"
 WORKDIR="$(dirname "$FILE")"
-BUILDDIR="$WORKDIR/build_out"
-
-# Create build output directory if it doesn't exist
-mkdir -p "$BUILDDIR"
 
 echo "Running $FILE ..."
 echo "--------------------------"
 
 case "$EXT" in
   c)
-    gcc "$FILE" -o "$BUILDDIR/$NAME" && "$BUILDDIR/$NAME"
+    gcc "$FILE" -o "$WORKDIR/$NAME" && "$WORKDIR/$NAME"
     ;;
   cpp|cc|cxx)
-    g++ "$FILE" -o "$BUILDDIR/$NAME" && "$BUILDDIR/$NAME"
+    g++ "$FILE" -o "$WORKDIR/$NAME" && "$WORKDIR/$NAME"
     ;;
   py)
     python "$FILE"
@@ -38,13 +34,13 @@ case "$EXT" in
     deno run "$FILE"
     ;;
   java)
-    javac "$FILE" -d "$BUILDDIR" && java -cp "$BUILDDIR" "$NAME"
+    javac "$FILE" -d "$WORKDIR" && java -cp "$WORKDIR" "$NAME"
     ;;
   go)
     go run "$FILE"
     ;;
   rs)
-    rustc "$FILE" -o "$BUILDDIR/$NAME" && "$BUILDDIR/$NAME"
+    rustc "$FILE" -o "$WORKDIR/$NAME" && "$WORKDIR/$NAME"
     ;;
   sh)
     bash "$FILE"
