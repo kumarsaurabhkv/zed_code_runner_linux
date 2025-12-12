@@ -51,6 +51,6 @@ Press F5
 
 The terminal panel will display the output
 
-Compiled binaries (if any) are stored in /tmp/zed-run
+Compiled binaries (if any) are stored in the same folder as the source.
 
 ⚠️ Pressing F5 while the task is already running will not start a new instance (prevents conflicts).
