@@ -20,7 +20,7 @@ A **ready-to-use setup for Zed IDE** that lets you run the currently open file w
   - Bash  
   - PHP  
 - Prevents overlapping runs of the same task  
-- Compiled binaries go to `/tmp/zed-run`  
+- Compiled binaries go into build_out in the same folder as the source.  
 - Terminal panel opens automatically  
 
 ---
