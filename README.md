@@ -32,13 +32,13 @@ A **ready-to-use setup for Zed IDE** that lets you run the currently open file w
 ```bash
 git clone https://github.com/kumarsaurabhkv/zed_code_runner_linux.git
 ```
-1. **Copy files to Zed config directory**
+2. **Copy files to Zed config directory**
 
 ```bash
 mkdir -p ~/.config/zed
 cp keymap.jsonc tasks.json custom_runfile.sh ~/.config/zed/
 ```
-1. **Make the run script executable**
+3. **Make the run script executable**
 
 ```bash
 chmod +x ~/.config/zed/custom_runfile.sh
